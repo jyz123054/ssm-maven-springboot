@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: # 所有的mapper映射文件
+  - classpath:mapping/*.xml
+
+spring:
+  datasource:
+#   注释这种user.jdbcUrl在多数据源时配置，如果单个使用下面url的方式
+#   user:
+#      jdbcUrl: jdbc:mysql://127.0.0.1:3306/ssm?serverTimezone=GMT%2B8
+      url: jdbc:mysql://127.0.0.1:3306/ssm?serverTimezone=GMT%2B8
+      driverClassName: com.mysql.jdbc.Driver
+      username: root
+      password: 123054
+      
+logging:
+  level:
+    test.ssm.sb.mapper: debug
